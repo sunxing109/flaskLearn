@@ -14,11 +14,11 @@ function set_openid(openid, pr)
     form.elements['openid'].value = openid
 }
 </script>
-<h1>Sign In</h1>
+<h1>{{ _("Sign In hello world") }}</h1>
 <form   action="/login" method="post" name="login">
     {{ form.hidden_tag() }}
     <p>
-        Please enter you Openid:<br>
+        {{ _("Please enter you Openid") }}:<br>
         {{ form.openid(size=80) }}<br>
     </p>
     {% for error in form.openid.errors %}
@@ -28,6 +28,6 @@ function set_openid(openid, pr)
           <a href="javascript:set_openid('{{ pr.url }}', '{{ pr.name }}');">{{ pr.name }}</a> |
         {% endfor %}
     <p>{{ form.remember_me }} Remember me</p>
-    <p><input type="submit" value="Sign In"></p>
+    <p><input type="submit" value="{{ _('Sign In') }}"></p>
 </form>
 {% endblock %}

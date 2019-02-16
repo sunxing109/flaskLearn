@@ -1,6 +1,9 @@
-from flask_Learn import app
+from flask_Learn import app,babel
 from flask import render_template, flash, redirect
 from .forms import LoginForm
+from flask.ext.babel import gettext
+
+
 @app.route('/index')
 def index():
     return 'index Hello World!' \
@@ -15,10 +18,10 @@ def hello():
     posts = [  # fake array of posts
         {
             'author': {'nickname': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'body': gettext('Beautiful day in Portland!')
         },
         {'author': {'nickname': 'Susan'},
-         'body': 'The Avengers movie was so cool!'
+         'body': gettext('The Avengers movie was so cool!')
          }
         ]
     # fake user
@@ -35,6 +38,10 @@ def login():
         flash('Login requested for OpenID="' + form.openid.data + '", remember_me=' + str(form.remember_me.data))
         return redirect('/hello')
     return render_template('login.html',
-        title = 'Sign In',
+        title = gettext('Sign In'),
         form = form,
         providers=app.config['OPENID_PROVIDERS'])
+
+# @babel.localeselector
+# def get_locale():
+#     return 'zh_Hans_CN'
