@@ -18,7 +18,13 @@ function set_openid(openid, pr)
 <form   action="/login" method="post" name="login">
     {{ form.hidden_tag() }}
     <p>
-        {{ _("Please enter you Openid") }}:<br>
+        {{ _("Please enter you %(t1)s Openid %(t2)s", t1='test1',t2='test2') }}
+        {% set items = [1,2,3,4,5,25] %}
+        {{ ngettext('%(num)d apple', '%(num)d apples',items|count) }}
+        {{ ngettext('%(num)d apple', '%(num)d apples',items|first) }}
+
+
+        <br>
         {{ form.openid(size=80) }}<br>
     </p>
     {% for error in form.openid.errors %}

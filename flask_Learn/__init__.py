@@ -2,12 +2,15 @@ from flask import Flask
 from flask_babel import Babel
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE'] = 'zh_Hans_CN'
+#app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 babel = Babel(app)
-import config
+import config, flask_Learn.views
 app.config.from_object(config)
+app.register_blueprint(flask_Learn.views.blueprint)
+app.register_blueprint(flask_Learn.views.blueprint)
 
 
-from flask_Learn import views
+
 
 
 

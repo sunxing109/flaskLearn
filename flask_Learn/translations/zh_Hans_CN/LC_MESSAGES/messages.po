@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-14 16:05+0800\n"
+"POT-Creation-Date: 2019-02-19 13:37+0800\n"
 "PO-Revision-Date: 2019-02-14 15:38+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans_CN\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: views.py:21
+#: views.py:27
 msgid "Beautiful day in Portland!"
 msgstr "真好"
 
-#: views.py:24
+#: views.py:30
 msgid "The Avengers movie was so cool!"
 msgstr "真酷"
 
-#: templates/login.html:31 views.py:41
+#: templates/login.html:36 views.py:47
 msgid "Sign In"
 msgstr "登录"
 
@@ -49,9 +49,17 @@ msgid "Sign In hello world"
 msgstr "登录 世界"
 
 #: templates/login.html:21
-msgid "Please enter you Openid"
-msgstr "输入你的openid"
+#, python-format
+msgid "Please enter you %(t1)s Openid %(t2)s"
+msgstr "请输入%(t1)s Openid %(t2)s"
 
-#~ msgid "%(nickname)s say: %(body)s,nickname=post.author.nickname,body=post.body"
-#~ msgstr ""
+#: templates/login.html:23
+#, python-format
+msgid "%(num)d apple"
+msgid_plural "%(num)d apples"
+msgstr[0] "%(num)d 个苹果1"
+
+
+
+
 

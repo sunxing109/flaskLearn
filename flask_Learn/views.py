@@ -1,8 +1,9 @@
 from flask_Learn import app,babel
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, url_for
 from .forms import LoginForm
-from flask.ext.babel import gettext
-
+from flask.ext.babel import gettext, ngettext
+import flask
+blueprint = flask.Blueprint(__name__,__name__)
 
 @app.route('/index')
 def index():
@@ -10,8 +11,13 @@ def index():
            '' \
            '<div>Microblog: <a href="/hello">Home</a></div>'
 
+@blueprint.route('/index2')
+def fun_urlfor():
+    return url_for('/index')
 
-@app.route('/')
+
+# @app.route('/')
+@blueprint.route('/hello2')
 @app.route('/hello')
 def hello():
     user = {'nickname': 'Miguel'}
