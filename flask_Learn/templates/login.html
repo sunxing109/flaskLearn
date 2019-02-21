@@ -26,6 +26,9 @@ function set_openid(openid, pr)
 
         <br>
         {{ form.openid(size=80) }}<br>
+        <br>
+        {{ form.dataset.label }}
+        {{ form.dataset.tooltip}}
     </p>
     {% for error in form.openid.errors %}
         <span style="color: red;">[{{ error }}]</span>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-19 13:37+0800\n"
+"POT-Creation-Date: 2019-02-21 14:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: forms.py:16
+msgid "Select Dataset"
+msgstr ""
+
+#: forms.py:18
+msgid "Choose the dataset to use for this model."
+msgstr ""
 
 #: views.py:27
 msgid "Beautiful day in Portland!"
@@ -25,8 +33,8 @@ msgstr ""
 msgid "The Avengers movie was so cool!"
 msgstr ""
 
-#: templates/login.html:36 views.py:47
-msgid "Sign In"
+#: views.py:49
+msgid "Sign In 22"
 msgstr ""
 
 #: templates/base.html:10
@@ -52,10 +60,24 @@ msgstr ""
 msgid "Please enter you %(t1)s Openid %(t2)s"
 msgstr ""
 
-#: templates/login.html:23
+#: templates/login.html:23 templates/login.html:24
 #, python-format
 msgid "%(num)d apple"
 msgid_plural "%(num)d apples"
 msgstr[0] ""
 msgstr[1] ""
+
+#: templates/login.html:40
+msgid "Sign In"
+msgstr ""
+
+#: utils/formstwo.py:73
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: utils/formstwo.py:75
+#, python-format
+msgid "Field must be greater than %s."
+msgstr ""
 
