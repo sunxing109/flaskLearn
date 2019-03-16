@@ -28,15 +28,11 @@ function set_openid(openid, pr)
         {{ form.openid(size=80) }}<br>
         <br>
         {{ form.dataset.label }}
-        {{ form.dataset.tooltip}}
+        {{ form.dataset}}
     </p>
-    {% for error in form.openid.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-      {% endfor %}
-    |{% for pr in providers %}
-          <a href="javascript:set_openid('{{ pr.url }}', '{{ pr.name }}');">{{ pr.name }}</a> |
-        {% endfor %}
     <p>{{ form.remember_me }} Remember me</p>
     <p><input type="submit" value="{{ _('Sign In') }}"></p>
 </form>
+    <h1>Video Streaming Demonstration</h1>
+    <img src="{{url_for('flask_Learn.views.deal_video')}}">
 {% endblock %}
